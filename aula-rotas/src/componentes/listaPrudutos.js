@@ -1,4 +1,4 @@
-export default listaProdutos= [
+export default listaProdutos = [
     {
         id: 1,
         nome :'Teclado',
