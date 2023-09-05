@@ -3,11 +3,10 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider} from 'react-router-dom'
-import Home from './routes/EditarProduto/Home/index.jsx'
-import Produto from './routes/EditarProduto/Produto/index.jsx'
-import Error from './routes/EditarProduto/Error/index.jsx'
-import EditarProduto from './routes/EditarProduto/EditarProdut/Index.jsx'
-
+import Home from './routes/Home/index.jsx'
+import Produto from './routes/Produto/index.jsx'
+import Error from './routes/Error/index.jsx'
+import EditarProduto from './routes/EditarProduto/Index.jsx'
 
 
 const router = createBrowserRouter([
@@ -17,24 +16,23 @@ const router = createBrowserRouter([
     errorElement: <Error/>,
     children:[
       {
-        path:"/",
-        element: <Home/>,
+        path: "/",
+        element: <Home/>
       },
       {
-        path:"/protudo",
-        element: <Protudo/>,
+        path: "/produto",
+        element: <Produto/>
       },
       {
-        path:"/protudo/editar/:id",
-        element: <EditarProduto/>,
+        path: "/produto/editar/:id",
+        element: <Produto/>
       },
     ]
   }
 ])
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
-  </React.StrictMode>, 
+    <App />
+  </React.StrictMode>,
 )
